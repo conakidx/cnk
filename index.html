@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diConak</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar Start -->
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="#" class="navbar-logo">Logo Di<span>ajar</span>.</a>
+            <!-- Navigation Links -->
+            <div class="navbar-nav">
+                <a href="#home">Home</a>
+                <a href="#form">Tentang Kami</a>
+                <a href="#kelas-menu">Menu</a>
+                <a href="#kelas">Kelas</a>
+            </div>
+            <!-- Extra Icons -->
+            <div class="navbar-extra">
+                <a href="#" id="search"><i data-feather="search"></i></a>
+                <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+                <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+    </header>
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Selamat Datang <span>di Wakanda</span></h1>
+            <p>Tempat diajar Urang salarea, hayu buruan daftar ameh meunang elmu anu manfaat.</p>
+            <a href="#" class="cta">Daftar ayena</a>
+        </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Ruang Kelas -->
+    <section id="kelas" class="kelas">
+        <h2><span>Ruang</span> Kelas</h2>
+        <div class="row">
+            <aside class="kelas-img">
+                <img src="img/kursus.jpg" alt="ruang kelas">
+            </aside>
+            <div class="content">
+                <h3>Kenapa harus <span>belajar dengan Kami</span></h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo nihil necessitatibus, aut obcaecati totam assumenda.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, labore!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, labore!</p>
+            </div>
+        </div>
+    </section>
+    <!-- Ruang Kelas End -->
+
+    <!-- Menu Kami -->
+    <section id="kelas-menu" class="kelas-menu">
+        <h2><span>Menu</span> Kami</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto consectetur iste illo, nemo at vero.</p>
+        <div class="row">
+            <div class="menu-card">
+                <img src="img/paketumroh.jpeg" alt="Paket 9 Hari">
+                <h3 class="menu-card-title">Paket 9 Hari</h3>
+                <p class="menu-card-price">$20K</p>
+            </div>
+            <div class="menu-card">
+                <img src="img/paketumroh.jpeg" alt="Paket 10 Hari">
+                <h3 class="menu-card-title">Paket 10 Hari</h3>
+                <p class="menu-card-price">$21K</p>
+            </div>
+            <div class="menu-card">
+                <img src="img/paketumroh.jpeg" alt="Paket 11 Hari">
+                <h3 class="menu-card-title">Paket 11 Hari</h3>
+                <p class="menu-card-price">$24K</p>
+            </div>
+            <div class="menu-card">
+                <img src="img/paketumroh.jpeg" alt="Paket 12 Hari">
+                <h3 class="menu-card-title">Paket 12 Hari</h3>
+                <p class="menu-card-price">$25K</p>
+            </div>
+        </div>
+    </section>
+    <!-- Menu Kami End -->
+
+    <!-- Kontak Kami -->
+    <section id="form">
+        <div id="kontak diConak">
+        <h2 class="kontak">Kontak <span>kami</span></h2>
+        <p>Anda dapat menghubungi kami melalui email di <a href="mailto:kontak@example.com">kontak@example.com</a> atau melalui formulir kontak di bawah ini.</p> <br>
+        <h3>AYO <span>DAFTAR BRO</span> </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda esse, voluptate magnam nesciunt accusamus tempore. Hic minima molestiae pariatur nobis laboriosam iste adipisci quo omnis sint distinctio, dicta vitae magni veniam nisi numquam vero quasi, velit iure aspernatur architecto cum mollitia totam dolor! Quaerat dolorum eum suscipit consectetur labore cumque.</p>
+
+        
+        </div>
+            <form>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="4" cols="50" required></textarea><br>
+                <input type="submit" value="Kirim">
+            </form>
+    </section>
+    
+    <div id="article">
+        <article>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt saepe ipsa nulla doloribus. Molestias accusantium quaerat aliquam nihil sapiente id temporibus illo aliquid autem est delectus, voluptatibus tempore alias ab..</p>
+        </article>
+        
+    </div>
+    <!-- Kontak Kami End -->
+
+  <footer class="footer">
+    <h1>
+        Konta Kami
+    </h1>
+
+  </footer>
+
+    <script>
+        feather.replace(); /* Mengaktifkan Feather Icons */
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
