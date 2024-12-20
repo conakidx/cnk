@@ -1,0 +1,403 @@
+:root {
+    --primary: #df8933; /* Warna utama */
+    --bg: #010101; /* Warna latar belakang */
+}
+
+* {
+    font-family: 'poppins', sans-serif; /* Font default */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    box-sizing: border-box; /* Mengatur box-sizing */
+    outline: none; /* Menghapus outline */
+    border: none; /* Menghapus border */
+    text-decoration: none; /* Menghapus dekorasi teks */
+}
+
+body {
+    font-family: 'poppins', sans-serif; /* Font untuk body */
+    background-color: var(--bg); /* Warna latar belakang body */
+    color: #fff; /* Warna teks */
+    min-height: 2000px; /* Tinggi minimum body */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-between; /* Jarak antar item */
+    align-items: center; /* Penyelarasan item di tengah */
+    padding: 1.4rem 7%; /* Padding navbar */
+    background-color: rgba(1, 1, 1, 0.8); /* Warna latar belakang navbar */
+    border-bottom: 1px solid #221910; /* Garis bawah */
+    position: fixed; /* Posisi tetap */
+    top: 0; /* Di bagian atas */
+    left: 0; /* Di sisi kiri */
+    right: 0; /* Di sisi kanan */
+    z-index: 9999; /* Menempatkan di atas elemen lain */
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem; /* Ukuran font untuk logo */
+    font-weight: 700; /* Ketebalan font */
+    color: #fff; /* Warna logo */
+}
+
+.navbar .navbar-logo span {
+    color: #d57c23; /* Warna untuk span di logo */
+}
+
+.navbar .navbar-nav a {
+    color: #fff; /* Warna link navbar */
+    display: inline-block; /* Menampilkan sebagai block inline */
+    font-size: 1rem; /* Ukuran font link */
+    margin: 0 1rem; /* Margin antar link */
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary); /* Warna saat hover */
+}
+
+/* Underline Animation */
+.navbar .navbar-nav a::after {
+    content: ''; /* Konten kosong untuk garis bawah */
+    display: block; /* Menampilkan sebagai block */
+    padding-bottom: 0.5rem; /* Jarak bawah */
+    border-bottom: 0.1rem solid var(--primary); /* Garis bawah */
+    bottom: -0.2rem; /* Jarak garis dari teks */
+    transform: scaleX(0); /* Tersembunyi awalnya */
+    transition: 0.2s linear; /* Transisi */
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1); /* Muncul saat hover */
+}
+
+.navbar .navbar-extra a {
+    color: #fff; /* Warna link ekstra */
+    margin: 0 0.5rem; /* Margin antar link ekstra */
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary); /* Warna saat hover untuk link ekstra */
+}
+
+#hamburger-menu {
+    display: none; /* Menyembunyikan hamburger menu */
+}
+
+/* Hero Section Styles */
+.hero {
+    min-height: 100vh; /* Tinggi minimum hero */
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Penyelarasan tengah */
+    background-image: url('../img/kabah02.png'); /* Gambar latar belakang */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+    background-size: cover; /* Menutupi area */
+    background-position: center; /* Pusat gambar */
+    position: relative; /* Posisi relatif */
+}
+
+.hero::after {
+    content: ''; /* Konten kosong untuk efek overlay */
+    display: block; /* Menampilkan sebagai block */
+    position: absolute; /* Posisi absolut */
+    width: 100%; /* Lebar penuh */
+    height: 30%; /* Tinggi 30% */
+    bottom: 0; /* Di bagian bawah */
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1), 12%, rgba(255, 255, 255, 0) 50%); /* Gradient overlay */
+}
+
+.hero .content {
+    padding: 1.4rem 7%; /* Padding konten hero */
+    max-width: 60%; /* Lebar maksimum konten */
+}
+
+.hero .content h1 {
+    font-size: 3.5em; /* Ukuran font judul */
+    color: #fff; /* Warna teks judul */
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); /* Efek bayangan */
+    line-height: 1.2; /* Tinggi garis */
+}
+
+.hero .content h1 span {
+    color: #e8a114; /* Warna untuk span dalam judul */
+}
+
+.hero .content p {
+    font-size: 1.3rem; /* Ukuran font untuk paragraf */
+    margin-top: 0.3rem; /* Jarak atas */
+    line-height: 1.4; /* Tinggi garis untuk paragraf */
+    font-weight: 300; /* Ketebalan font */
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); /* Efek bayangan */
+}
+
+/* CTA Button */
+.hero .content .cta { 
+    margin-top: 1rem; /* Jarak atas untuk tombol */
+    display: inline-block; /* Menampilkan sebagai block inline */
+    padding: 0.5rem 0.5rem; /* Padding tombol */
+    font-size: 0.8rem; /* Ukuran font tombol */
+    color: #fff; /* Warna teks tombol */
+    background-color: #d57c23; /* Warna latar belakang tombol */
+    border-radius: 0.5rem; /* Sudut membulat tombol */
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.8); /* Efek bayangan tombol */
+}
+
+/* About Section Styles */
+.kelas, .menu, .kelas-menu h2 {
+    padding: 6rem 7% 1.4rem; /* Padding untuk section */
+}
+
+.kelas h2, .menu h2, .kelas-menu h2 {
+    text-align: center; /* Penyelarasan teks tengah */
+    font-size: 2.5rem; /* Ukuran font untuk judul */
+    margin-bottom: 3rem; /* Margin bawah untuk judul */
+}
+
+.kelas h2 span, .menu h2 span, .kelas-menu h2 span {
+    color: #d57c23; /* Warna untuk span dalam judul */
+}
+
+.kelas .row {
+    display: flex; /* Menggunakan flexbox untuk baris */
+}
+
+.kelas .row .kelas-img {
+    flex: 1 1 45rem; /* Flex item untuk gambar */
+}
+
+.kelas .row .kelas-img img {
+    width: 100%; /* Lebar gambar penuh */
+}
+
+/* Content Styles */
+.kelas .row .content { 
+    flex: 1 1 35rem; /* Flex item untuk konten */
+    padding: 0; /* Padding untuk konten */
+}
+
+.kelas .row .content h3 {
+    font-size: 1.7rem; /* Ukuran font untuk sub-judul */
+    margin-bottom: 0.5rem; /* Margin bawah untuk sub-judul */
+    margin-left: 2rem; /* Margin kiri untuk sub-judul */
+}
+
+.kelas .row .content p {
+    margin-bottom: 1.5rem; /* Margin bawah untuk paragraf */
+    margin-left: 2rem; /* Margin kiri untuk paragraf */
+    font-size: 1.2rem; /* Ukuran font untuk paragraf */
+    font-weight: 200; /* Ketebalan font */
+    line-height: 1.6; /* Tinggi garis untuk paragraf */
+}
+
+.kelas .row .content h3 span {
+    color: #d57c23; /* Warna untuk span dalam sub-judul */
+}
+
+/* Kelas Menu Styles */
+.kelas-menu h2 {
+    margin-bottom: -2rem; /* Margin bawah untuk judul */
+    margin-top: -4rem; /* Margin atas untuk judul */
+}
+
+.kelas-menu p {
+    text-align: center; /* Penyelarasan teks tengah */
+    max-width: 20rem; /* Lebar maksimum paragraf */
+    margin: auto; /* Margin otomatis */
+    font-weight: 300; /* Ketebalan font */
+    line-height: 1.6; /* Tinggi garis untuk paragraf */
+    padding-top: 0.5rem; /* Padding atas */
+    padding-bottom: 1rem; /* Padding bawah */
+}
+
+.kelas-menu .row {
+    display: flex; /* Menggunakan flexbox untuk baris */
+    flex-wrap: wrap; /* Mengizinkan pembungkusan */
+    margin-top: 2rem; /* Margin atas untuk baris */
+    justify-content: center; /* Penyelarasan tengah untuk baris */
+}
+
+.kelas-menu .row .menu-card {
+    text-align: center; /* Penyelarasan teks tengah untuk kartu menu */
+}
+
+.kelas-menu .row .menu-card img {
+    border-radius: 10%; /* Sudut membulat untuk gambar kartu menu */
+    width: 40%; /* Lebar gambar kartu menu */
+}
+
+/* Article Styles */
+article {
+    margin-top: -20rem; /* Margin atas untuk artikel */
+    padding: 2rem; /* Padding untuk artikel */
+    text-align: center; /* Penyelarasan teks tengah */
+}
+
+article p {
+    text-align: center; /* Penyelarasan teks tengah untuk paragraf */
+    max-width: 50rem; /* Lebar maksimum paragraf */
+    margin: auto; /* Margin otomatis untuk tengah */
+    font-weight: 200; /* Ketebalan font */
+    line-height: 1.6; /* Tinggi garis untuk paragraf */
+}
+
+/* Image Hover Effect */
+article img:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+    transition: transform 0.3s; /* Transisi efek zoom */
+}
+
+/* Form Section Styles */
+#form {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: flex-end; /* Mengatur konten ke sebelah kanan */
+    align-items: flex-start; /* Menyelaraskan konten ke bagian atas */
+    padding: 20rem; /* Ruang di sekitar section */
+    padding-top: 7rem; /* Padding atas */
+}
+
+form {
+    width: 400px; /* Lebar form */
+    background-color: #1e1e1e; /* Latar belakang form */
+    padding: 20px; /* Padding di dalam form */
+    border-radius: 8px; /* Sudut membulat form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan form */
+}
+
+form label {
+    display: block; /* Menampilkan label sebagai block */
+    margin-bottom: 0.8rem; /* Margin bawah untuk label */
+    color: #b3b3b3; /* Warna teks label */
+    font-size: 1rem; /* Ukuran font label */
+    padding-right: 20rem; /* Padding kanan untuk label */
+}
+
+/* Color for highlighted text */
+.kontak span, h3 span {
+    color: #d57c23; /* Warna untuk span dalam kontak dan h3 */
+}
+
+/* Contact Section Styles */
+.kontak diConak {
+    display: flex; /* Menggunakan flexbox untuk konten kontak */
+    flex-wrap: wrap; /* Mengizinkan pembungkusan */
+    margin-top: 2rem; /* Margin atas untuk kontak */
+    justify-content: center; /* Penyelarasan tengah untuk kontak */
+}
+
+form input, form textarea {
+    width: 100%; /* Mengisi penuh form container */
+    margin-bottom: 1rem; /* Margin bawah untuk input */
+    padding: 10px; /* Padding dalam input */
+    border: 1px solid #555; /* Border untuk input */
+    border-radius: 4px; /* Sudut membulat untuk input */
+    background-color: #2a2a2a; /* Latar belakang input */
+    color: #fff; /* Warna teks input */
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #777; /* Warna placeholder */
+}
+
+form input:focus, form textarea:focus {
+    outline: none; /* Menghapus outline saat fokus */
+    border-color: #5cb85c; /* Warna border saat fokus */
+    box-shadow: 0 0 5px rgba(92, 184, 92, 0.5); /* Glow hijau saat fokus */
+}
+
+form input[type="submit"] {
+    background-color: #5cb85c; /* Warna hijau untuk tombol submit */
+    color: white; /* Warna teks tombol */
+    cursor: pointer; /* Kursor pointer saat hover */
+    padding: 10px 20px; /* Padding tombol */
+    border: none; /* Menghapus border tombol */
+    border-radius: 4px; /* Sudut membulat tombol */
+    transition: background-color 0.3s ease; /* Transisi warna latar belakang */
+}
+
+form input[type="submit"]:hover {
+    background-color: #4cae4c; /* Warna hijau lebih gelap saat hover */
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #1e1e1e;
+
+}
+   
+
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%; /* Ukuran font untuk laptop */
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%; /* Ukuran font untuk tablet */
+    }
+
+    #hamburger-menu {
+        display: inline-block; /* Menampilkan hamburger menu pada tablet */
+    }
+
+    .navbar .navbar-nav {
+        position: absolute; /* Posisi absolut untuk navbar */
+        top: 100%; /* Di bawah navbar */
+        right: -100%; /* Menyembunyikan navbar */
+        background-color: #fff; /* Warna latar belakang navbar */
+        width: 30rem; /* Lebar navbar */
+        height: 100vh; /* Tinggi navbar */
+        transition: 0.3s; /* Transisi saat muncul */
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0; /* Menampilkan navbar saat aktif */
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg); /* Warna link navbar */
+        display: block; /* Menampilkan link sebagai block */
+        margin: 1.5rem; /* Margin antar link */
+        padding: 0.5rem; /* Padding untuk link */
+        font-size: 1.5rem; /* Ukuran font link */
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0; /* Titik asal transformasi */
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2); /* Efek saat hover */
+    }
+
+    .kelas .row {
+        flex-wrap: wrap; /* Mengizinkan pembungkusan pada kelas */
+    }
+
+    .kelas .row .kelas-img img {
+        height: 23rem; /* Tinggi gambar dalam kelas */
+        object-fit: cover; /* Mempertahankan rasio gambar */
+        object-position: center; /* Pusat gambar */
+    }
+
+    .kelas .row .content {
+        padding: 0; /* Padding untuk konten dalam kelas */
+    }
+
+    .kelas .row .content h3 {
+        margin-top: 1rem; /* Margin atas untuk sub-judul */
+        font-size: 1.6rem; /* Ukuran font untuk sub-judul */
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%; /* Ukuran font untuk ponsel */
+    }
+}
